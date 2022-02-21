@@ -1,0 +1,7 @@
+{
+    "name": "Hide Gif Label",
+    "version": "0.1.0",
+    "description": "Hides the gif label if gifs height is less than 50px",
+    "author": "Aria",
+    "license": "MIT"
+}
