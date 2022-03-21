@@ -6,10 +6,10 @@ class HideGifLabel extends Plugin {
     async startPlugin() {
         const _Image = await getModule((m) => m?.default?.displayName === "Image");
         inject("hide-gif-label", _Image.default.prototype, "render", (_, res) => {
-            if (res.props.style.height < 50) res.props.children.shift();
+            if (res.props.children.props.style.height < 50) res.props.children.props.children.pop();
             return res;
         });
-        _Image.default.displayName = "LazyImage";
+        _Image.default.displayName = "Image";
     }
 
     pluginWillUnload() {
